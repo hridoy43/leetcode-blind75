@@ -7,6 +7,8 @@ const testInput = [
     [1,2,3,4],
 ]
 
+// use HashMap or HashSet
+
 // solution
 var containsDuplicate = function(nums) {
     const uniqueNumSet = new Set(nums);
@@ -14,7 +16,6 @@ var containsDuplicate = function(nums) {
 };
 
 // Another Approach
-// HashSet
 var containsDuplicate = function(nums) {
     const hashSet = new Set();
     for (n of nums) {
