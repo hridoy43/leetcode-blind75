@@ -26,10 +26,10 @@ var containsDuplicate = function(nums) {
 
 // Other Approach
 var containsDuplicate = function(nums) {
-    let numbObj = {}
+    let numObj = {}
     for (i=0;i<nums.length;i++){
-        if(i !== 0 && numbObj.hasOwnProperty(nums[i])) return true
-        numbObj[`${nums[i]}`] = nums[i]
+        if(i !== 0 && numObj.hasOwnProperty(nums[i])) return true
+        numObj[`${nums[i]}`] = nums[i]
     }
     return false
 };
