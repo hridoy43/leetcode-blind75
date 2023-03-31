@@ -1,6 +1,12 @@
 // 1. Two Sum
 // https://leetcode.com/problems/two-sum/
 
+/**
+ * Related Problem
+ * 167. Two Sum II - Input Array Is Sorted
+ * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+ */
+
 const testInputs = [
    { 
     nums:  [2,7,11,15], // output -> [0,1]
