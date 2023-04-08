@@ -12,6 +12,7 @@ const testCases = [
 
 /**
  * Brute Force
+ * two pointer
  */
 var lengthOfLongestSubstring = function(s) {
     if (s.length <= 1) return s.length
@@ -34,7 +35,28 @@ var lengthOfLongestSubstring = function(s) {
             left++;
         }
     }
-    return longestSubstring.length > tempSubString.length ? longestSubstring.length : tempSubString.length;
+    return  Math.max(longestSubstring.length, tempSubString.length)
+};
+
+/**
+ * Another Approach (Sliding window)
+ * time O(n)
+ * space O(n)
+ */
+var lengthOfLongestSubstring = function(s) {
+    const charSet = new Set()
+    let longestSubstringLength = 0;
+    let left = 0;
+
+    for (let right of s) {
+        while(charSet.has(right)) {
+            charSet.delete(s[left]);
+            left++;
+        }
+        charSet.add(right);
+        longestSubstringLength = Math.max(longestSubstringLength, charSet.size)
+    }
+    return longestSubstringLength;
 };
 
 // console.log(lengthOfLongestSubstring(testCases[0]))
